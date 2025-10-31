@@ -17,7 +17,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "tenants", indexes = {
+@Table(name = "tenants", schema = "public", indexes = {
         @Index(name = "idx_tenant_tax_id", columnList = "taxId")
 })
 @Data
@@ -82,7 +82,7 @@ public class Tenant {
     // audit
     @CreationTimestamp
     @Column(name = "created_at", nullable = false)
-    private LocalDateTime createdAt;
+    private LocalDateTime createdAt = LocalDateTime.now();
 
     @UpdateTimestamp
     @Column(name = "updated_at")
