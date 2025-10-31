@@ -1,4 +1,4 @@
-package com.benattidev.carwashx.modules.tenant.domain.repository;
+package com.benattidev.carwashx.modules.tenant.repository;
 
 import java.util.Optional;
 import java.util.UUID;
